@@ -9,8 +9,6 @@ public class RemoveDuplicatesFromAnArray {
     public static ArrayList<Integer> returnDistinctListOfNumbersFrom(ArrayList<Integer> listOfNumbers) {
         Set<Integer> distinctSet = new HashSet<>(listOfNumbers);
 
-        ArrayList<Integer> distinctList = new ArrayList<>(distinctSet);
-
-        return distinctList;
+        return new ArrayList<>(distinctSet);
     }
 }
