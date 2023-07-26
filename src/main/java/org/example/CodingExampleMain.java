@@ -1,9 +1,13 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
+import static org.example.FibonacciPrinter.printFibonacciUntil;
 import static org.example.FindNLargestNumbersFromArray.returnTwoMaxesFromArrayOf;
+import static org.example.FrequencyChecker.calculateFrequency;
 import static org.example.IntegerPalindromeChecker.isPalindrome;
 import static org.example.LongestSequenceOfCharacters.findLongestSequenceOfCharacters;
 import static org.example.PrimeNumberChecker.isAPrimeNumber;
@@ -29,6 +33,8 @@ public class CodingExampleMain {
             System.out.println("5. Find Two max numbers from Array");
             System.out.println("6. Remove Duplicate numbers from Array");
             System.out.println("7. Sort Array of Strings in case");
+            System.out.println("8. Find the frequency of each number in an array");
+            System.out.println("9. Print Fibonacci within a range");
             System.out.println();
             System.out.print("Please enter a number to select the corresponding example: ");
             int option = program.nextInt();
@@ -165,6 +171,46 @@ public class CodingExampleMain {
                     System.out.println("Please wait while we process the sorted array");
                     System.out.println("Printing the sorted array of words");
                     createSortedList(listOfWords);
+                }
+
+                case 8 -> {
+                    System.out.println();
+                    System.out.print("Please enter the size of the array you want to operate on: ");
+                    int size = program.nextInt();
+                    System.out.println();
+                    int[] listOfNumbers = new int[size];
+                    System.out.println("Please enter " + size + " numbers into the array:");
+                    System.out.println();
+                    for (int i = 0; i < size; i++) {
+                        System.out.print("number" + (i+1) + "= ");
+                        listOfNumbers[i] = program.nextInt();
+                    }
+                    System.out.println("Printing input array. Please wait... ");
+                    System.out.print("[ ");
+                    for (int number : listOfNumbers) {
+                        if (number == listOfNumbers[listOfNumbers.length-1])
+                            System.out.print(number);
+                        else
+                            System.out.print(number + ", ");
+                    }
+                    System.out.print(" ]");
+                    System.out.println();
+                    System.out.println("Please wait while we get the frequency of each number for you...");
+                    HashMap<Integer, Integer> frequencyMap = calculateFrequency(listOfNumbers);
+                    System.out.println();
+                    for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
+                        System.out.print("Number = " + entry.getKey() + ", Frequency = " + entry.getValue());
+                        System.out.println();
+                    }
+                    System.out.println();
+                }
+
+                case 9 -> {
+                    System.out.println();
+                    System.out.print("Please enter the range until which you wish to print the Fibonacci Sequence: ");
+                    long range = program.nextLong();
+                    System.out.println("Please  wait while the Fibonacci sequence is printed until " + range);
+                    printFibonacciUntil(range);
                 }
 
                 default -> {
