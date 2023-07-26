@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d9e946f-4271-4332-ad77-8f93715469c9" name="Changes" comment="Added more examples and modified Switch statement">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/FindNLargestNumbersFromArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/RemoveDuplicatesFromAnArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/SortArrayOfStrings.java" afterDir="false" />
+    <list default="true" id="1d9e946f-4271-4332-ad77-8f93715469c9" name="Changes" comment="Optimized returned ArrayList implementation for duplicate number removal from Array example">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CodingExampleMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CodingExampleMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/WindowHandleExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/WindowHandleExample.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +48,7 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean install -DskipTests=true" />
+      <command value="git pull origin master" />
     </option>
   </component>
   <component name="RunManager" selected="Application.CodingExampleMain">
@@ -124,10 +122,37 @@
       <option name="presentableId" value="Default" />
       <updated>1683043224631</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added more examples and modified Switch statement">
+      <option name="closed" value="true" />
+      <created>1689829927710</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1689829927710</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Optimized Set and ArrayList implementation for duplicate number removal from Array example">
+      <option name="closed" value="true" />
+      <created>1689830522392</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1689830522392</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Optimized returned ArrayList implementation for duplicate number removal from Array example">
+      <option name="closed" value="true" />
+      <created>1689830553323</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1689830553323</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added more examples and modified Switch statement" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added more examples and modified Switch statement" />
+    <MESSAGE value="Optimized Set and ArrayList implementation for duplicate number removal from Array example" />
+    <MESSAGE value="Optimized returned ArrayList implementation for duplicate number removal from Array example" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimized returned ArrayList implementation for duplicate number removal from Array example" />
   </component>
 </project>
