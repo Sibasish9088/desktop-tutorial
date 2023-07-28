@@ -6,11 +6,11 @@ public class FrequencyChecker {
 
     public static HashMap<Integer, Integer> calculateFrequency(int[] listOfNumbers) {
         HashMap<Integer, Integer> frequencyMap = new HashMap<>();
-        for (int listOfNumber : listOfNumbers) {
-            if (frequencyMap.containsKey(listOfNumber))
-                frequencyMap.put(listOfNumber, frequencyMap.get(listOfNumber) + 1);
+        for (int number : listOfNumbers) {
+            if (frequencyMap.containsKey(number))
+                frequencyMap.put(number, frequencyMap.get(number) + 1);
             else
-                frequencyMap.put(listOfNumber, 1);
+                frequencyMap.put(number, 1);
         }
         return frequencyMap;
     }
