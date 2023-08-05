@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d9e946f-4271-4332-ad77-8f93715469c9" name="Changes" comment="Optimized for loop in FrequencyChecker">
+    <list default="true" id="1d9e946f-4271-4332-ad77-8f93715469c9" name="Changes" comment="Refactored listOfNumber variable to number in for each loop">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CheckIfOnlyOddNumbersInArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CoinFlipProbability.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/FactorialOfAnInteger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/RemoveWhiteSpacesFromString.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FrequencyChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FrequencyChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CodingExampleMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CodingExampleMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FibonacciPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FibonacciPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PrimeNumberChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PrimeNumberChecker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690389037934</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Refactored listOfNumber variable to number in for each loop">
+      <option name="closed" value="true" />
+      <created>1690529943445</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1690529943445</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -180,6 +194,7 @@
     <MESSAGE value="Refactored SauceLabs and WindowHandles example&#10;Added changes to workspace" />
     <MESSAGE value="More Examples added:&#10;&#10;FibonacciPrinter&#10;FrequencyChecker" />
     <MESSAGE value="Optimized for loop in FrequencyChecker" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimized for loop in FrequencyChecker" />
+    <MESSAGE value="Refactored listOfNumber variable to number in for each loop" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored listOfNumber variable to number in for each loop" />
   </component>
 </project>

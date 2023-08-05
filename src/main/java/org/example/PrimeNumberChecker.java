@@ -7,7 +7,7 @@ public class PrimeNumberChecker {
         if (number < 2) return false;
         else if (number == 2) return true;
         else {
-            for (int i = 3; i <= number/2; i++) {
+            for (int i = 3; i <= Math.sqrt(number); i++) {
                 if (number % i == 0) return false;
             }
         }

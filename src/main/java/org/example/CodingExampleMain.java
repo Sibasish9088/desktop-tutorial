@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+import static org.example.CheckIfOnlyOddNumbersInArray.isOnlyOddArray;
+import static org.example.CoinFlipProbability.calculateProbabilityOf;
+import static org.example.FactorialOfAnInteger.calculateFactorialOf;
 import static org.example.FibonacciPrinter.printFibonacciUntil;
 import static org.example.FindNLargestNumbersFromArray.returnTwoMaxesFromArrayOf;
 import static org.example.FrequencyChecker.calculateFrequency;
@@ -12,6 +15,7 @@ import static org.example.IntegerPalindromeChecker.isPalindrome;
 import static org.example.LongestSequenceOfCharacters.findLongestSequenceOfCharacters;
 import static org.example.PrimeNumberChecker.isAPrimeNumber;
 import static org.example.RemoveDuplicatesFromAnArray.returnDistinctListOfNumbersFrom;
+import static org.example.RemoveWhiteSpacesFromString.removeWhiteSpacesFrom;
 import static org.example.SortArrayOfStrings.createSortedList;
 import static org.example.VowelPresenceChecker.hasVowel;
 
@@ -35,6 +39,10 @@ public class CodingExampleMain {
             System.out.println("7. Sort Array of Strings in case");
             System.out.println("8. Find the frequency of each number in an array");
             System.out.println("9. Print Fibonacci within a range");
+            System.out.println("10. Check if only odd numbers in the array");
+            System.out.println("11. Remove White Spaces From a String");
+            System.out.println("12. Find the factorial of an Integer");
+            System.out.println("13. Find Coin Flip Probability");
             System.out.println();
             System.out.print("Please enter a number to select the corresponding example: ");
             int option = program.nextInt();
@@ -65,8 +73,8 @@ public class CodingExampleMain {
                     System.out.print("Enter a number: ");
                     long num = program.nextLong();
                     System.out.println();
-                    if (isAPrimeNumber(num)) System.out.println(num + "is a Prime number");
-                    else System.out.println(num + "is not a Prime number");
+                    if (isAPrimeNumber(num)) System.out.println(num + " is a Prime number");
+                    else System.out.println(num + " is not a Prime number");
                     System.out.print("To continue, please press 'y' and to exit press 'n' : ");
                     choice = program.next();
                 }
@@ -211,6 +219,69 @@ public class CodingExampleMain {
                     long range = program.nextLong();
                     System.out.println("Please  wait while the Fibonacci sequence is printed until " + range);
                     printFibonacciUntil(range);
+                }
+
+                case 10 -> {
+                    System.out.println();
+                    System.out.print("Please enter the size of the Array: ");
+                    int size = program.nextInt();
+                    System.out.println("Please enter the Array which you wish to check: ");
+                    int[] numbers = new int[size];
+                    for (int i = 0; i < size; i++) {
+                        System.out.print("number " + i + 1 + " = ");
+                        numbers[i] = program.nextInt();
+                    }
+                    System.out.println("Your entered array was: ");
+                    System.out.print("[ ");
+                    for (int number : numbers) {
+                        if (number == numbers[numbers.length-1])
+                            System.out.print(number);
+                        else
+                            System.out.print(number + ", ");
+                    }
+                    System.out.print(" ]");
+                    System.out.println();
+                    if (isOnlyOddArray(numbers)) System.out.println("Given Array contains only odd numbers.");
+                    else System.out.println("Given Array is a mix of odd and even numbers.");
+                }
+
+                case 11 -> {
+                    System.out.println();
+                    String irregularString = "Sibasish ";
+                    System.out.println("You have entered: |" + irregularString+ "|");
+                    System.out.println();
+                    String regularString = removeWhiteSpacesFrom(irregularString);
+                    if (regularString != null) {
+                        System.out.println("Please wait while we remove white spaces... ");
+                        System.out.println("Your normalized String is: |" + regularString + "|");
+                    }
+                    else
+                        System.out.println("There are no white spaces in |" + irregularString + "|");
+                }
+
+                case 12 -> {
+                    System.out.println();
+                    System.out.print("Please enter the number you want to find the factorial for: ");
+                    int number = program.nextInt();
+                    System.out.println();
+                    System.out.println("Factorial of " + number + " = " + calculateFactorialOf(number));
+                }
+
+                case 13 -> {
+                    int coin;
+                    Map<HashMap<String, Integer>, Double> probabilityMapper = new HashMap<>();
+                    System.out.println();
+                    System.out.print("Please enter the number of times the coin needs to be flipped: ");
+                    int flips = program.nextInt();
+                    System.out.println("Experimenting the theoretical probability of the coin flip for " + flips + "flips");
+                    probabilityMapper = calculateProbabilityOf(flips);
+                    System.out.println("For " + flips + " flips, the theoretical probability can be calculated as follows");
+                    for (Map.Entry<HashMap<String, Integer>, Double> probability : probabilityMapper.entrySet()) {
+                        for (Map.Entry<String, Integer> count : probability.getKey().entrySet()) {
+                            System.out.println("Count of " + count.getKey() + " = " + count.getValue());
+                            System.out.println("Probability of " + count.getKey() + " = " + probability.getValue());
+                        }
+                    }
                 }
 
                 default -> {
