@@ -268,8 +268,7 @@ public class CodingExampleMain {
                 }
 
                 case 13 -> {
-                    int coin;
-                    Map<HashMap<String, Integer>, Double> probabilityMapper = new HashMap<>();
+                    Map<HashMap<String, Integer>, Double> probabilityMapper;
                     System.out.println();
                     System.out.print("Please enter the number of times the coin needs to be flipped: ");
                     int flips = program.nextInt();
